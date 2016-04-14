@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  web:
+    build: web
+    volumes:
+      - /assets
+
+  nginx:
+    build: nginx
+    volumes_from:
+      - web
